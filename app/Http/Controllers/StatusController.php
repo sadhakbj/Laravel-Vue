@@ -20,7 +20,7 @@ class StatusController extends Controller
     {
         $this->user = $user;
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -28,7 +28,7 @@ class StatusController extends Controller
      */
     public function index()
     {
-        return Status::with('user')->latest()->get();
+        return Status::with('user')->latest()->paginate(3);
     }
 
     /**

@@ -1,6 +1,6 @@
 class Status{
-    static all(){
-        return axios.get('/statuses');
+    static all(pageNumber){
+        return axios.get(`/statuses/?page=${pageNumber}`);
     }
 }
 
